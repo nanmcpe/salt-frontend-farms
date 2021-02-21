@@ -1,12 +1,12 @@
 import useTitle from 'hooks/useTitle'
-import { usePriceCakeBusd } from 'state/hooks'
+import { usePriceSaltBusd } from 'state/hooks'
 
 interface DocumentTitleProps {
   title?: string
 }
 
 const DocumentTitle: React.FC<DocumentTitleProps> = ({ title }) => {
-  const saltPriceUsd = usePriceCakeBusd()
+  const saltPriceUsd = usePriceSaltBusd()
 
   useTitle(`$${saltPriceUsd.toFixed(3)} - ${title}`)
 

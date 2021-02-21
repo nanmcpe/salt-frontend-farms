@@ -74,7 +74,7 @@ export const usePriceBnbBusd = (): BigNumber => {
   return ZERO // farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO // fixme: LP
 }
 
-export const usePriceCakeBusd = (): BigNumber => {
+export const usePriceSaltBusd = (): BigNumber => {
   // const pid = 1 // CAKE-BNB LP
   // const bnbPriceUSD = usePriceBnbBusd()
   // const farm = useFarmFromPid(pid)
@@ -87,7 +87,7 @@ export const usePriceCakeBusd = (): BigNumber => {
 export const useTotalValue = (): BigNumber => {
   const farms = useFarms()
   const bnbPrice = usePriceBnbBusd()
-  const cakePrice = usePriceCakeBusd()
+  const saltPrice = usePriceSaltBusd()
   let value = new BigNumber(0)
   for (let i = 0; i < farms.length; i++) {
     const farm = farms[i]
@@ -96,7 +96,7 @@ export const useTotalValue = (): BigNumber => {
       if (farm.quoteTokenSymbol === QuoteToken.BNB) {
         val = bnbPrice.times(farm.lpTotalInQuoteToken)
       } else if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
-        val = cakePrice.times(farm.lpTotalInQuoteToken)
+        val = saltPrice.times(farm.lpTotalInQuoteToken)
       } else {
         val = farm.lpTotalInQuoteToken
       }
