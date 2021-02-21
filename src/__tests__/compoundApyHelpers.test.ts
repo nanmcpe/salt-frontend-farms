@@ -1,14 +1,14 @@
-import { calculateCakeEarnedPerThousandDollars, apyModalRoi } from '../utils/compoundApyHelpers'
+import { calculateSaltEarnedPerThousandDollars, apyModalRoi } from '../utils/compoundApyHelpers'
 
 it.each([
-  [{ numberOfDays: 1, farmApy: 365, cakePrice: 1 }, 10],
-  [{ numberOfDays: 7, farmApy: 20, cakePrice: 0.8 }, 4.8],
-  [{ numberOfDays: 40, farmApy: 212.21, cakePrice: 1.2 }, 217.48],
-  [{ numberOfDays: 330, farmApy: 45.12, cakePrice: 5 }, 100.67],
-  [{ numberOfDays: 365, farmApy: 100, cakePrice: 0.2 }, 8572.84],
-  [{ numberOfDays: 365, farmApy: 20, cakePrice: 1 }, 221.34],
-])('calculate cake earned with values %o', ({ numberOfDays, farmApy, cakePrice }, expected) => {
-  expect(calculateCakeEarnedPerThousandDollars({ numberOfDays, farmApy, cakePrice })).toEqual(expected)
+  [{ numberOfDays: 1, farmApy: 365, saltPrice: 1 }, 10],
+  [{ numberOfDays: 7, farmApy: 20, saltPrice: 0.8 }, 4.8],
+  [{ numberOfDays: 40, farmApy: 212.21, saltPrice: 1.2 }, 217.48],
+  [{ numberOfDays: 330, farmApy: 45.12, saltPrice: 5 }, 100.67],
+  [{ numberOfDays: 365, farmApy: 100, saltPrice: 0.2 }, 8572.84],
+  [{ numberOfDays: 365, farmApy: 20, saltPrice: 1 }, 221.34],
+])('calculate salt earned with values %o', ({ numberOfDays, farmApy, saltPrice }, expected) => {
+  expect(calculateSaltEarnedPerThousandDollars({ numberOfDays, farmApy, saltPrice })).toEqual(expected)
 })
 
 it.each([

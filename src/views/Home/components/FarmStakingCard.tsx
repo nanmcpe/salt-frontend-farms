@@ -6,8 +6,8 @@ import useI18n from 'hooks/useI18n'
 import { useAllHarvest } from 'hooks/useHarvest'
 import useFarmsWithBalance from 'hooks/useFarmsWithBalance'
 import UnlockButton from 'components/UnlockButton'
-import CakeHarvestBalance from './CakeHarvestBalance'
-import CakeWalletBalance from './CakeWalletBalance'
+import SaltHarvestBalance from './SaltHarvestBalance'
+import SaltWalletBalance from './SaltWalletBalance'
 
 const StyledFarmStakingCard = styled(Card)`
   background-image: url('/images/salt-bae-bg.png');
@@ -61,11 +61,11 @@ const FarmedStakingCard = () => {
         </Heading>
         <CardImage src="/images/salt.svg" alt="salt logo" width={64} height={64} />
         <Block>
-          <CakeHarvestBalance />
+          <SaltHarvestBalance />
           <Label>{TranslateString(544, 'SALT to Harvest')}</Label>
         </Block>
         <Block>
-          <CakeWalletBalance />
+          <SaltWalletBalance />
           <Label>{TranslateString(546, 'SALT in Wallet')}</Label>
         </Block>
         <Actions>

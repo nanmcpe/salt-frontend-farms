@@ -3,13 +3,13 @@ import { Text } from '@saltswap/uikit'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import useTokenBalance from 'hooks/useTokenBalance'
 import useI18n from 'hooks/useI18n'
-import { getCakeAddress } from 'utils/addressHelpers'
+import { getSaltAddress } from 'utils/addressHelpers'
 import { getBalanceNumber } from 'utils/formatBalance'
 import CardValue from './CardValue'
 
-const CakeWalletBalance = () => {
+const SaltWalletBalance = () => {
   const TranslateString = useI18n()
-  const cakeBalance = useTokenBalance(getCakeAddress())
+  const saltBalance = useTokenBalance(getSaltAddress())
   const { account } = useWallet()
 
   if (!account) {
@@ -20,7 +20,7 @@ const CakeWalletBalance = () => {
     )
   }
 
-  return <CardValue value={getBalanceNumber(cakeBalance)} fontSize="24px" />
+  return <CardValue value={getBalanceNumber(saltBalance)} fontSize="24px" />
 }
 
-export default CakeWalletBalance
+export default SaltWalletBalance

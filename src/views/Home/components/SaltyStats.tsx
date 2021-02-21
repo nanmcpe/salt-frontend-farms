@@ -5,11 +5,11 @@ import styled from 'styled-components'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
 import useI18n from 'hooks/useI18n'
-import { getCakeAddress } from 'utils/addressHelpers'
+import { getSaltAddress } from 'utils/addressHelpers'
 import CardValue from './CardValue'
 import { useFarms } from '../../../state/hooks'
 
-const StyledCakeStats = styled(Card)`
+const StyledSaltyStats = styled(Card)`
   margin-left: auto;
   margin-right: auto;
 `
@@ -22,12 +22,12 @@ const Row = styled.div`
   margin-bottom: 8px;
 `
 
-const CakeStats = () => {
+const SaltyStats = () => {
   const TranslateString = useI18n()
   const totalSupply = useTotalSupply()
-  const burnedBalance = useBurnedBalance(getCakeAddress())
+  const burnedBalance = useBurnedBalance(getSaltAddress())
   const farms = useFarms()
-  const cakeSupply = totalSupply ? getBalanceNumber(totalSupply) - getBalanceNumber(burnedBalance) : 0
+  const saltSupply = totalSupply ? getBalanceNumber(totalSupply) - getBalanceNumber(burnedBalance) : 0
 
   let saltPerBlock = 0
   if (farms && farms[0] && farms[0].saltPerBlock) {
@@ -35,14 +35,14 @@ const CakeStats = () => {
   }
 
   return (
-    <StyledCakeStats>
+    <StyledSaltyStats>
       <CardBody>
         <Heading size="xl" mb="24px">
           {TranslateString(534, 'Salty Stats')}
         </Heading>
         <Row>
           <Text fontSize="14px">{TranslateString(536, 'Total SALT Supply')}</Text>
-          {cakeSupply && <CardValue fontSize="14px" value={cakeSupply} decimals={0} />}
+          {saltSupply && <CardValue fontSize="14px" value={saltSupply} decimals={0} />}
         </Row>
         <Row>
           <Text fontSize="14px">{TranslateString(538, 'Total SALT Burned')}</Text>
@@ -55,8 +55,8 @@ const CakeStats = () => {
           </Text>
         </Row>
       </CardBody>
-    </StyledCakeStats>
+    </StyledSaltyStats>
   )
 }
 
-export default CakeStats
+export default SaltyStats

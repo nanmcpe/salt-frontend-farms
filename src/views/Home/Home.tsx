@@ -5,13 +5,12 @@ import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
 import Countdown from 'views/Countdown/Countdown'
 import FarmStakingCard from './components/FarmStakingCard'
-import CakeStats from './components/CakeStats'
+import SaltyStats from './components/SaltyStats'
 import TotalValueLockedCard from './components/TotalValueLockedCard'
 import TwitterCard from './components/TwitterCard'
 
 const Hero = styled.div`
   align-items: center;
-  background-image: url('/images/egg/3.png');
   background-repeat: no-repeat;
   background-position: top center;
   display: flex;
@@ -74,7 +73,7 @@ const Home: React.FC = () => {
         <Cards>
           <FarmStakingCard />
           <TwitterCard />
-          <CakeStats />
+          <SaltyStats />
           <TotalValueLockedCard />
         </Cards>
       </div>

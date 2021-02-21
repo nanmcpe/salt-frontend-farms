@@ -1,5 +1,5 @@
 export default {
-  cake: {
+  salt: {
     56: '0x2849b1aE7E04A3D9Bc288673A92477CF63F28aF4',
     97: '0xDE7FD400F6091c5786271A3aA6E7587Ae60390D6',
   },

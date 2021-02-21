@@ -236,12 +236,6 @@
     },
     {
       "data": {
-        "stringId": 364,
-        "text": "Total Syrup Staked"
-      }
-    },
-    {
-      "data": {
         "stringId": 380,
         "text": "1 SALT = 1 PEPPER"
       }
@@ -280,12 +274,6 @@
       "data": {
         "stringId": 392,
         "text": "Project Site"
-      }
-    },
-    {
-      "data": {
-        "stringId": 394,
-        "text": "Unstake SYRUP"
       }
     },
     {
@@ -548,18 +536,6 @@
     },
     {
       "data": {
-        "stringId": 496,
-        "text": "SYRUP holders proportionally split 40% of SALT block emissions each day (10 SALT per block), Rewards are distributed each block."
-      }
-    },
-    {
-      "data": {
-        "stringId": 500,
-        "text": "IFO: Initial Farm Offerings"
-      }
-    },
-    {
-      "data": {
         "stringId": 502,
         "text": "Buy new tokens with a brand new token sale model."
       }
@@ -586,12 +562,6 @@
       "data": {
         "stringId": 510,
         "text": "You get the tokens."
-      }
-    },
-    {
-      "data": {
-        "stringId": 512,
-        "text": "Want to launch your own IFO?"
       }
     },
     {
@@ -830,12 +800,6 @@
     },
     {
       "data": {
-        "stringId": 602,
-        "text": "While the sale is live, commit your SALT-LP tokens to buy the IFO tokens"
-      }
-    },
-    {
-      "data": {
         "stringId": 604,
         "text": "After Sale"
       }
@@ -1060,12 +1024,6 @@
       "data": {
         "stringId": 680,
         "text": "Info"
-      }
-    },
-    {
-      "data": {
-        "stringId": 682,
-        "text": "IFO"
       }
     },
     {
