@@ -4,6 +4,7 @@ import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { ResetCSS } from '@saltswap/uikit'
 import BigNumber from 'bignumber.js'
 import { useFetchPublicData } from 'state/hooks'
+import DocumentTitle from 'DocumentTitle'
 import GlobalStyle from './style/Global'
 import Menu from './components/Menu'
 import PageLoader from './components/PageLoader'
@@ -36,6 +37,7 @@ const App: React.FC = () => {
 
   return (
     <Router>
+      <DocumentTitle title="SaltSwap" />
       <ResetCSS />
       <GlobalStyle />
       <Menu>
